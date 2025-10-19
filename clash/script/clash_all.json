@@ -14,7 +14,7 @@ const main = (config) => {
   
   if (config.proxies) {
   config.proxies = config.proxies.filter(proxy => 
-    !proxy.name?.match(/剩余|重置|官网|套餐|订阅|重启|群组/)
+    !proxy.name?.match(/剩余|重置|官网|套餐|订阅|重启|群组|测试|电视/)
   );
   };
   
