@@ -1,1 +1,1 @@
-抄来的singbox和clash的简易配置
+singbox和clash的简易配置
