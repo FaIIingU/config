@@ -174,79 +174,93 @@ const main = (config) => {
     "MATCH,Proxy"
   ];
 
-  const commonRuleConfig = {
-    domain: { type: "http", interval: 86400, behavior: "domain", format: "mrs" },
-    yaml: { type: "http", interval: 86400, behavior: "domain", format: "yaml" },
-    ipcidr: { type: "http", interval: 86400, behavior: "ipcidr", format: "mrs" }
+const domainConfig = {
+    type: 'http',
+    interval: 86400,
+    behavior: 'domain',
+    format: 'mrs'
   };
-  config["rule-providers"] = {
+  const yamlConfig = {
+    type: 'http',
+    interval: 86400,
+    behavior: 'domain',
+    format: 'yaml'
+  };
+  const ipConfig = {
+    type: 'http',
+    interval: 86400,
+    behavior: 'ipcidr',
+    format: 'mrs'
+  };
+  
+  config['rule-providers'] = {
     private_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/private.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/private.mrs'
     },
     reject_domain: {
-      ...commonRuleConfig.yaml,
-      url: "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml"
+      ...yamlConfig,
+      url: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml'
     },
     ai_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/category-ai-!cn.mrs'
     },
     youtube_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/youtube.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/youtube.mrs'
     },
     google_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/google.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/google.mrs'
     },
     github_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/github.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/github.mrs'
     },
     telegram_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/telegram.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/telegram.mrs'
     },
     instagram_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/instagram.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/instagram.mrs'
     },
     microsoft_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/microsoft.mrs'
     },
     tiktok_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/tiktok.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/tiktok.mrs'
     },
     twitter_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/twitter.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/twitter.mrs'
     },
-    "geolocation-!cn": {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/geolocation-!cn.mrs"
+    'geolocation-!cn': {
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/geolocation-!cn.mrs'
     },
     cn_domain: {
-      ...commonRuleConfig.domain,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/cn.mrs"
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/cn.mrs'
     },
     private_ip: {
-      ...commonRuleConfig.ipcidr,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs"
+      ...ipConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs'
     },
     cn_ip: {
-      ...commonRuleConfig.ipcidr,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/cn.mrs"
+      ...ipConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/cn.mrs'
     },
     google_ip: {
-      ...commonRuleConfig.ipcidr,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/google.mrs"
+      ...ipConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/google.mrs'
     },
     telegram_ip: {
-      ...commonRuleConfig.ipcidr,
-      url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/telegram.mrs"
+      ...ipConfig,
+      url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/telegram.mrs'
     }
   };
   return config;
