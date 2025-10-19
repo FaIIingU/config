@@ -108,6 +108,7 @@ const main = (config) => {
     'RULE-SET,cn_ip,DIRECT',
     'MATCH,Proxy'
   ];
+  
   const domainConfig = {
     type: 'http',
     interval: 86400,
