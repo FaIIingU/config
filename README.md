@@ -1,1 +1,1 @@
-自用
+自用singbox和clash的简易配置
