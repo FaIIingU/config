@@ -5,6 +5,8 @@ const main = (config) => {
   config['allow-lan'] = true;
   config['unified-delay'] = false;
   config['tcp-concurrent'] = true;
+  config['external-controller'] = 127.0.0.1:9090;
+  config['secret'] = leejieun;
   config['find-process-mode'] = 'strict';
   config['global-client-fingerprint'] = 'firefox';
   config.profile = {
