@@ -1,1 +1,1 @@
-singbox和clash的简易配置
+singbox和clash简易配置，无策略组。
