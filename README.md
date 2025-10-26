@@ -1,1 +1,1 @@
-singbox和clash简易配置，无策略组。
+singbox,clash仅proxy出站简易配置
