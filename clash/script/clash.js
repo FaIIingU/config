@@ -117,12 +117,6 @@ const main = (config) => {
     behavior: 'domain',
     format: 'mrs'
   };
-  const yamlConfig = {
-    type: 'http',
-    interval: 86400,
-    behavior: 'domain',
-    format: 'yaml'
-  };
   const ipConfig = {
     type: 'http',
     interval: 86400,
@@ -136,8 +130,8 @@ const main = (config) => {
       url: 'https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geosite/private.mrs'
     },
     reject_domain: {
-      ...yamlConfig,
-      url: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.yaml'
+      ...domainConfig,
+      url: 'https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Clash.mrs'
     },
     ai_domain: {
       ...domainConfig,
