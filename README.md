@@ -1,1 +1,1 @@
-singbox,clash仅proxy出站简易配置
+singbox,clash自用简易配置
