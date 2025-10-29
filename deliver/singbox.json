@@ -10,7 +10,7 @@
       "external_controller": "127.0.0.1:20123",
       "external_ui": "",
       "external_ui_download_url": "",
-      "secret": "zc123456",
+      "secret": "leejieun",
       "default_mode": "rule",
       "access_control_allow_origin": [
         "*"
