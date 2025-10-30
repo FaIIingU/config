@@ -84,9 +84,7 @@ const main = (config) => {
       type: "select",
       proxies: [
         "Proxy"
-      ],
-      "include-all": true,
-      "exclude-type": "direct"
+      ]
     }
   ];
   
