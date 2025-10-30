@@ -1,1 +1,1 @@
-singbox,clash自用简易配置
+singbox and mihomo select config.
