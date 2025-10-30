@@ -83,8 +83,6 @@ proxy-groups:
     type: select
     proxies:
       - Proxy
-    include-all: true
-    exclude-type: direct
     
 # 规则    
 rules:
